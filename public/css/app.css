@@ -68,11 +68,13 @@ div {
 }
 
 #chat-column-holder {
+  width: 100%;
   text-align: center;
 }
 
 .chat-column {
   height: 100%;
+  width: 100%;
   padding: 0.9375rem 0 0.625rem 0;
   margin: auto;
   text-align: left;
@@ -81,6 +83,7 @@ div {
 }
 
 #scrollingChat {
+  width: 100%;
   margin: 0.75rem;
   overflow-y: auto;
   overflow-x: hidden;
@@ -122,7 +125,7 @@ div {
   color: #fff;
   letter-spacing: 0.015rem;
   line-height: 1.3125rem;
-  background: #00B4A0;
+  background: #AB301F;
   border-radius: 1.25rem;
   border-bottom-right-radius: 0;
   text-align: left;
@@ -148,7 +151,7 @@ div {
   right: 0;
   height: 0.375rem;
   width: 0.5rem;
-  background: #1cb3a0;
+  background: #AB301F;
 }
 
 .from-user .message-inner:after {
@@ -181,8 +184,8 @@ div {
 
 .from-watson.latest.top p:before {
   content: ".";
-  color: #9855D4;
-  background-image: url("../img/marker_image.png");
+  color: #AB301F;
+  background-image: url("../img/point.png");
   background-size: 0.3125rem 1.3125rem;
   position: absolute;
   z-index: 2;
@@ -209,7 +212,7 @@ div {
 }
 
 #textInput.underline {
-  border-bottom: 2px solid #00B4A0;
+  border-bottom: 2px solid #AB301F;
 }
 
 ::-webkit-input-placeholder {
@@ -258,13 +261,13 @@ input:-moz-placeholder {
   color: #fff;
   overflow-x: auto;
 
-  width: 45%;
+  width: 0%;
   max-width: 32.0625rem;
   min-width: 29.6875rem;
 }
 
 #payload-column.full {
-  width: 100%;
+  width: 0%;
   max-width: none;
   min-width: initial;
 }
@@ -330,7 +333,7 @@ html{
   }
 
   #payload-column {
-    width: 0;
+    width: 0%;
     max-width: none;
     min-width: initial;
   }
@@ -433,3 +436,29 @@ html{
   font-weight: normal;
   font-style: normal;
 }
+
+
+
+/* Buttons style */
+.button-image-style{
+  width: 100px;
+  margin: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.yes_no_button{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #AB301F;
+  color: white;
+}
+
+button:focus {outline:0;}
