@@ -467,15 +467,19 @@ html{
   color: black;
 }
 
-.yes_no_button{
+.watsButt{
   width: 100px;
   height: 50px;
-  margin: 10px;
+  margin-left: 10px;
   font-size: 16px;
   border: none;
   border-radius: 10px;
   background-color: #083F5F;
   color: white;
+  transition: all 0.3s ease 0s;
+}
+.watsButt:hover{
+  background-color: #002E48;
 }
 
 button:focus {outline:0;}

@@ -6,27 +6,68 @@
   <style media="screen">
     iframe {
       background-color: #fff;
-
       height: 650px;
       width: 400px;
       float: right;
-      margin-top: 130px;
+      margin-top: 50px;
       margin-bottom: 10px;
-
       -moz-border-radius: 12px;
       -webkit-border-radius: 12px;
       border-radius: 12px;
-
       -moz-box-shadow: 4px 4px 14px #000;
       -webkit-box-shadow: 4px 4px 14px #000;
       box-shadow: 4px 4px 14px #000;
+
+      visibility: visible;
+    }
+
+    .showHide {
+      position: absolute;
+      right: 10px;
+      bottom: 5px;
+      width: 70px;
+      height: 70px;
+      background-color: #92CAD5;
+      border: none;
+      color: black;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      border-radius: 50%;
+      transition: all 0.3s ease 0s;
+    }
+    .showHide:focus{
+      outline: 0;
+    }
+    .showHide:hover{
+      background-color: #7DADB7;
     }
   </style>
+  <script type="text/javascript">
+    var visibility = true;
+    function displayIframe() {
+      var iframe = document.getElementById("iframe");
+      var button = document.getElementById("button");
+      if (visibility == true) {
+        iframe.style.display = "none";
+        button.innerHTML = "<img src='img/chat.png'width='30px'/>";
+        visibility = false;
+      } else {
+        iframe.style.display = "";
+        button.innerHTML = "X";
+        visibility = true;
+      }
+    }
+  </script>
   <title>The Plunge website</title>
 </head>
 
 <body background="img/fake-background.png">
-  <iframe src="http://localhost:3000/"></iframe>
+  <button type="button" id="button" onclick="displayIframe()" class="showHide">x</button>
+  <iframe id="iframe" src="http://localhost:3000/" visibility="visible"></iframe>
 </body>
 
 </html>
