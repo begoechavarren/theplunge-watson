@@ -4,20 +4,19 @@
 <head>
   <meta charset="utf-8">
   <style media="screen">
+    body {
+      background-image: url("img/fake-background.png");
+      background-repeat: "no-repeat";
+    }
+
     iframe {
-      background-color: #fff;
-      height: 650px;
-      width: 400px;
       float: right;
       margin-top: 50px;
-      margin-bottom: 10px;
-      -moz-border-radius: 12px;
-      -webkit-border-radius: 12px;
+      width: 400px;
+      height: 650px;
+      background-color: #fff;
       border-radius: 12px;
-      -moz-box-shadow: 4px 4px 14px #000;
-      -webkit-box-shadow: 4px 4px 14px #000;
       box-shadow: 4px 4px 14px #000;
-
       visibility: visible;
     }
 
@@ -39,15 +38,18 @@
       border-radius: 50%;
       transition: all 0.3s ease 0s;
     }
-    .showHide:focus{
+
+    .showHide:focus {
       outline: 0;
     }
-    .showHide:hover{
+
+    .showHide:hover {
       background-color: #7DADB7;
     }
   </style>
   <script type="text/javascript">
     var visibility = true;
+
     function displayIframe() {
       var iframe = document.getElementById("iframe");
       var button = document.getElementById("button");
@@ -65,9 +67,10 @@
   <title>The Plunge website</title>
 </head>
 
-<body background="img/fake-background.png">
-  <button type="button" id="button" onclick="displayIframe()" class="showHide">x</button>
-  <iframe id="iframe" src="http://localhost:3000/" visibility="visible"></iframe>
+<body>
+    <button type="button" id="button" onclick="displayIframe()" class="showHide">x</button>
+    <iframe id="iframe" src="http://ec2-18-220-175-198.us-east-2.compute.amazonaws.com:8081/" visibility="visible"></iframe>
+
 </body>
 
 </html>

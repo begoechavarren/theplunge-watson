@@ -22,6 +22,9 @@ var watson = require('watson-developer-cloud'); // watson sdk
 
 var app = express();
 
+// view engine setup
+app.set('view engine', 'html');
+
 // Bootstrap application settings
 app.use(express.static('./public')); // load UI from public folder
 app.use(bodyParser.json());
@@ -92,5 +95,9 @@ function updateMessage(input, response) {
   response.output.text = responseText;
   return response;
 }
+
+app.get('/test', function(req, res){
+  res.sendFile('test.html', { root: './public' });
+});
 
 module.exports = app;
