@@ -1,0 +1,44 @@
+body {
+  background-image: url("img/fake-background.png");
+  background-repeat: no-repeat;
+}
+iframe {
+  width: 380px;
+  height: 550px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 4px 4px 14px #000;
+  visibility: visible;
+}
+
+.showHide {
+  width: 70px;
+  height: 70px;
+  background-color: #92CAD5;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50%;
+  transition: all 0.3s ease 0s;
+  margin-top: 10px;
+}
+.showHide:focus {
+  outline: 0;
+}
+.showHide:hover {
+  background-color: #7DADB7;
+}
+
+#chat{
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+}
+#button{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}

@@ -2,51 +2,8 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <style media="screen">
-    body {
-      background-image: url("img/fake-background.png");
-      background-repeat: "no-repeat";
-    }
-
-    iframe {
-      float: right;
-      margin-top: 50px;
-      width: 400px;
-      height: 650px;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 4px 4px 14px #000;
-      visibility: visible;
-    }
-
-    .showHide {
-      position: absolute;
-      right: 10px;
-      bottom: 5px;
-      width: 70px;
-      height: 70px;
-      background-color: #92CAD5;
-      border: none;
-      color: black;
-      padding: 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      border-radius: 50%;
-      transition: all 0.3s ease 0s;
-    }
-
-    .showHide:focus {
-      outline: 0;
-    }
-
-    .showHide:hover {
-      background-color: #7DADB7;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="test.css">
   <script type="text/javascript">
     var visibility = true;
 
@@ -68,8 +25,13 @@
 </head>
 
 <body>
-    <button type="button" id="button" onclick="displayIframe()" class="showHide">x</button>
-    <iframe id="iframe" src="http://ec2-18-220-175-198.us-east-2.compute.amazonaws.com:8081/" visibility="visible"></iframe>
+
+<div id="chat">
+  <iframe id="iframe" src="http://localhost:9000/" visibility="visible"></iframe><br>
+</div>
+<div class="button">
+  <button type="button" id="button" onclick="displayIframe()" class="showHide">x</button>
+</div>
 
 </body>
 
